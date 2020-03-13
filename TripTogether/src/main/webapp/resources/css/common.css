@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@font-face {
+	font-family:'Godo';
+	src:url('../font/GodoB.ttf) format('truetype');
+}
+/* html { font-family: 'Godo''; } */
+
+.commonDIV { width:950px; margin:50px auto; }
+.logo { text-align:center; width:100%; }

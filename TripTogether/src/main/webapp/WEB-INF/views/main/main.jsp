@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <html>
 	<head>
-		<title>TripTogether</title>1
+		<title>TripTogether</title>
 		<link rel="stylesheet" href="css/common.css">
 	</head>
 	<body>

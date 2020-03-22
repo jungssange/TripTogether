@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="commonDIV">
-			<!-- 로고 --> 
+			<!-- 로고 -->  
 			<div class="logo"><img src="images/common/logo.png" style="width:150px; height:150px;" /></div>
 			
 			<!-- 경로 -->

@@ -7,8 +7,10 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.trip.common.searchParam;
 import com.trip.user.userDAO;
 import com.trip.user.userDO;
 
@@ -28,11 +30,20 @@ public class main {
 	}
 	
 	@RequestMapping(value = "/main")
-	public String main_(Locale locale, Model model) throws Exception {
+	public String main_(Locale locale, Model model, @ModelAttribute("searchInfo") searchParam searchInfo) throws Exception {
 		
-		/* DB ÄÁ³Ø¼Ç ¹× ¼¿·ºÆ® Å×½ºÆ® */
+		/* DB ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½×½ï¿½Æ® */
+		if (searchInfo.getFrdate()==null){
+			searchInfo.setFrdate(com.trip.common.utilCalen.get_firstOfYear());
+		}
+		if (searchInfo.getTodate()==null){
+			searchInfo.setTodate(com.trip.common.utilCalen.get_today());
+		}
+		
 		List<userDO> userList = userDAO.selectUserList();
 		model.addAttribute("userList", userList);
+		model.addAttribute("searchInfo", searchInfo);
+		model.addAttribute("searchVO",   searchInfo);
 		
 		return "main/main";
 	}

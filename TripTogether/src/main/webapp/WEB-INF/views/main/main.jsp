@@ -1,7 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" type="text/css" href="css/wizen_common.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css"/>
+<link rel="stylesheet" type="text/css" href="css/DataTables/datatables.css"/>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/default.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="js/jquery.ui.datepicker-ko.js"></script>
+<script type="text/javascript" src="js/wizenFileDownload.js"></script>
+<script type="text/javascript" src="js/jquery.freezeheader.js"></script>
+
+<script type="text/javascript" src="js/DataTables/datatables.js"></script>
+
+<script type="text/javascript">
+	jQuery(function() {
+		$('#frdate').datepicker({
+			showOn : "button",
+			buttonImage : "images/common/calendar.png",
+			buttonText : "날짜선택",
+			buttonImageOnly : true
+		});
+	});
+	
+	jQuery(function() {
+		$('#todate').datepicker({
+			showOn : "button",
+			buttonImage : "images/common/calendar.png",
+			buttonText : "날짜선택",
+			buttonImageOnly : true
+		});
+	});
+</script>
 
 <html>
 	<head>
@@ -54,10 +91,21 @@
 			
 			<!-- 여행지 리스트 -->
 			<div style="text-align:center; width:100%; padding-top:100px;">
-				<div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px 15px 0px 0px;">1</div>
-				<div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px 15px 0px 0px;">2</div>
+				<div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px 15px 0px 0px;">
+				<ol>
+							<c:forEach var="triplist" items="${triplist}" varStatus="status">
+									<li>
+										<div class="list_wrap" id="tripdiv<c:out value="${status.index}"/>">
+											<a href="myTrip">
+											</a>
+										</div>
+									</li>
+							</c:forEach>
+						</ol>
+				</div>
+				<!-- <div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px 15px 0px 0px;">2</div>
 				<div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px 15px 0px 0px;">3</div>
-				<div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px;">4</div>
+				<div style="display:inline-block; width:23%; height:250px; border:1px solid #000; margin:0px;">4</div> -->
 			</div>
 		</div>
 	</body>

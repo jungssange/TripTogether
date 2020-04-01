@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.trip.main">
+	<logger name="com.trip">
 		<level value="info" />
 	</logger>
 	

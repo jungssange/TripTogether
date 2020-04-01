@@ -8,16 +8,9 @@ html { font-family: Nanum; }
 	src: url('../font/NanumBarunGothic-YetHangul.ttf');
 }
 
+/* 기본틀 */
 .commonDIV { width:950px; margin:50px auto; }
-.logo { text-align:center; width:100%; }
 
-.rootDIV { width:950px; margin:40px auto; }
-.rootLeft { display:inline-block; width:49%; text-align:left; }
-.rootLeft .left { display:inline-block; width:49%; text-align:left; }
-.rootLeft .right { display:inline-block; width:49%; text-align:left; float:right; }
-.rootRight { display:inline-block; width:50%; text-align:right; float:right; }
-.rootRight .left { display:inline-block; width:31%; text-align:left; }
-.rootRight .center { display:inline-block; width:31%; text-align:left; }
-.rootRight .right { display:inline-block; width:31%; text-align:left; }
-
-.mainText { margin-top:5px; border:1px solid #000; width:98%; height:40px; }
+/* 검색 버튼 */
+.searchDIV { vertical-align:bottom; display:inline-block; padding:5px; }
+.searchBtn { background:url('../images/common/search.png'); width:32px; height:32px; cursor:pointer; }

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <html>
 	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>TripTogether</title>
 		<link rel="stylesheet" href="css/common.css">
 	</head>
@@ -16,27 +16,27 @@
 			<!-- 경로 -->
 			<div class="rootDIV">
 				<div class="rootLeft">
-					<div class="start">
+					<div class="left">
 						출발지
-						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
+						<div class="mainText"></div>
 					</div>
-					<div class="end">
+					<div class="right">
 						도착지
-						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
+						<div class="mainText"></div>
 					</div>
 				</div>
 				<div class="rootRight">
-					<div style="display:inline-block; width:33%; text-align:left;">
+					<div class="left">
 						가는날
-						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
+						<div class="mainText"></div>
 					</div>
-					<div style="display:inline-block; width:32%; text-align:left;">
+					<div class="center">
 						오늘날
-						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
+						<div class="mainText"></div>
 					</div>
-					<div style="display:inline-block; width:32%; text-align:left;">
+					<div class="right">
 						좌석 및 인원
-						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
+						<div class="mainText" style="float:right;"></div>
 					</div>
 				</div>
 				

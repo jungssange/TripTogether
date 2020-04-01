@@ -26,14 +26,19 @@
 					</div>
 				</div>
 				<div class="rootRight">
-					<div style="display:inline-block; width:33%; text-align:left;">
+					<label for="from_date" class="invisible">오는날</label><!-- 시작일 -->
+						<input id="frdate" name="frdate" type="text" value="<c:out value="${searchInfo.frdate}"/>" readonly="readonly" style="width:90px; text-indent:0px" title="FromDate" />
+							~
+					<label for="to_date" class="invisible">가는날</label><!-- 종료일 -->
+						<input id="todate" name="todate" type="text" value="<c:out value="${searchInfo.todate}"/>" readonly="readonly" style="width:90px; text-indent:0px" title="ToDate" />
+					<!-- <div style="display:inline-block; width:33%; text-align:left;">
 						가는날
 						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
 					</div>
 					<div style="display:inline-block; width:32%; text-align:left;">
 						오늘날
 						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>
-					</div>
+					</div> -->
 					<div style="display:inline-block; width:32%; text-align:left;">
 						좌석 및 인원
 						<div style="margin-top:10px; border:1px solid #000; width:100%; height:40px;"></div>

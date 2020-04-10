@@ -5,7 +5,7 @@ html { font-family: Nanum; }
 
 @font-face {
 	font-family: Nanum;
-	src: url('../font/NanumBarunGothic-YetHangul.ttf');
+	src: url('../font/NanumBarunGothic-YetHangul.ttf'), format('embedded-opentype');
 }
 
 /* 기본틀 */

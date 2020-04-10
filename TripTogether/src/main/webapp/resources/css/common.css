@@ -1,17 +1,16 @@
 @charset "utf-8";
+/**/ 
+
+html { font-family: Nanum; }
 
 @font-face {
-	font-family:'Nanum';
-	src:url('../font/NanumBarunGothic-YetHangul.ttf) format('truetype');
+	font-family: Nanum;
+	src: url('../font/NanumBarunGothic-YetHangul.ttf');
 }
 
-html { font-family: 'Nanum''; }
-
+/* 기본틀 */
 .commonDIV { width:950px; margin:50px auto; }
-.logo { text-align:center; width:100%; }
 
-.rootDIV {}
-.rootLeft {}
-.rootLeft .start { display:inline-block; width:33%; text-align:left; }
-.rootLeft .end { display:inline-block; width:32%; text-align:left; }
-.rootRight {}
+/* 검색 버튼 */
+.searchDIV { vertical-align:bottom; display:inline-block; padding:5px; }
+.searchBtn { background:url('../images/common/search.png'); width:32px; height:32px; cursor:pointer; }

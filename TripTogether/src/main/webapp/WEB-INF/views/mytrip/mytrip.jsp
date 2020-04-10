@@ -17,10 +17,10 @@
 		<div class="commonDIV">
 			<div class="logo"><img src="images/common/logo.png" style="width:50px; height:50px; cursor:pointer;" onClick="home()" /></div>
 			
-			<div style="width:100%; height:500px; border:1px solid #eeeeee; margin-top:10px;">
-				<div style="display:inline-block; width:10%; height:100%; border-right:1px solid #eeeeee;">&nbsp;</div>
-				<div style="display:inline-block; width:30%; height:100%; border-right:1px solid #eeeeee;">&nbsp;</div>
-				<div style="display:inline-block; width:59%; height:100%;">&nbsp;</div>
+			<div class="tripDIV">
+				<div class="tripAreaLeft">&nbsp;</div>
+				<div class="tripAreaCenter">&nbsp;</div>
+				<div class="tripAreaRight">&nbsp;</div>
 			</div>
 		</div>
 	</body>

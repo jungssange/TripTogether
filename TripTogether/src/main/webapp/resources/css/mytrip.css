@@ -1,3 +1,8 @@
 @charset "utf-8";
 
 @import url("common.css");
+
+.tripDIV { width:100%; height:500px; border:1px solid #eeeeee; margin-top:10px; }
+.tripAreaLeft { display:inline-block; width:10%; height:100%; border-right:1px solid #eeeeee; }
+.tripAreaCenter { display:inline-block; width:30%; height:100%; border-right:1px solid #eeeeee; }
+.tripAreaRight { display:inline-block; width:58%; height:100%; }

@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		
 		<script type="text/javascript">
-			jQuery(function() {
+			/* jQuery(function() {
 				$('#frdate').datepicker({
 					showOn : "button",
 					buttonImage : "images/common/calendar.png",
@@ -41,7 +41,7 @@
 					buttonText : "날짜선택",
 					buttonImageOnly : true
 				});
-			});
+			}); */
 			
 			function placeSearch() {
 				window.location.href="mytrip";

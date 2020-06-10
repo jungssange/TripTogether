@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="trip.common">
+    <insert id="inertTag"  parameterType="com.trip.common.hashTag">
+    	<selectKey resultType="String" keyProperty="tagno" order="BEFORE">
+    		SELECT ISNULL(MAX(TAGNO), 0) + 1 AS TAGNO FROM PU_TAG
+    	</selectKey>
+        INSERT INTO PU_TAG(TAGNO, TYPENO, CONTENTS, TYPE, ENTRYDATE)
+		VALUES (#{tagno}, #{typeno}, #{contents}, #{type}, GETDATE())
+    </insert>
+    
+    <select id="selectHashtag" resultType="com.trip.common.hashTag">
+    	SELECT '#' + CONTENTS AS CONTENTS, TYPENO, TYPE FROM (
+			SELECT CONTENTS, ENTRYDATE, COUNT(*) CNT, TYPENO, TYPE
+			FROM PU_TAG PT
+			GROUP BY PT.CONTENTS, ENTRYDATE, TYPENO, TYPE
+		) DS
+		ORDER BY DS.CNT DESC, ENTRYDATE DESC
+    </select>
+</mapper>

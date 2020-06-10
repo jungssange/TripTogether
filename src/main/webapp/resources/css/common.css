@@ -1,0 +1,19 @@
+@charset "utf-8";
+/**/ 
+
+html { font-family: Nanum; }
+
+@font-face {
+	font-family: Nanum;
+	src: url('../font/NanumBarunGothic-YetHangul.ttf'), format('embedded-opentype');
+}
+
+input:focus {outline:none;}
+input {color:#a0a0a0;}
+
+/* 기본틀 */
+.commonDIV { width:950px; margin:50px auto; }
+
+/* 검색 버튼 */
+.searchDIV { display:inline-block; padding:5px; margin-top:2px; vertical-align:top; }
+.searchBtn { background:url('../images/common/search.png'); width:32px; height:32px; cursor:pointer; }

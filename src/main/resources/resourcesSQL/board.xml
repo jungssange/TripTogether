@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="trip.board">
+    <select id="selectBoardList" resultType="com.trip.board.boardDO" parameterType="com.trip.common.searchParam">
+    	SELECT * FROM (
+	    	SELECT ROW_NUMBER() OVER(ORDER BY BRDNO DESC) AS SEQ, BRDNO, TITLE, CONVERT(VARCHAR(10), ENTRYDATE, 121) AS ENTRYDATE, TYPE, USERNM
+	    	  FROM BO_BOARD
+	    	 WHERE DELETEFLAG='N'
+	    	 <if test='searchKeyword!=null and searchKeyword!=""'>
+	    	   AND ${searchType} LIKE '%' + #{searchKeyword} + '%'
+	    	 </if>
+	    	) DS
+    	<if test="startRow!=null and startRow!=''"> WHERE SEQ BETWEEN ${startRow} AND ${endRow}</if>	 
+    </select>
+    
+    <select id="selectBoardCount" resultType="Integer" parameterType="com.trip.common.searchParam">
+    	SELECT COUNT(*)
+    	  FROM BO_BOARD
+    	 WHERE DELETEFLAG='N'
+    	 <if test='searchKeyword!=null and searchKeyword!=""'>
+    	   AND ${searchType} LIKE '%' + #{searchKeyword} + '%'
+    	 </if>
+    </select>
+    
+    <select id="selectBoardListOn" resultType="com.trip.board.boardDO" >
+    	SELECT BRDNO, TITLE, CONVERT(VARCHAR(10), ENTRYDATE, 121) AS ENTRYDATE, TYPE, USERNM
+    	  FROM BO_BOARD
+    	 WHERE DELETEFLAG='N'
+    </select>
+    
+    <select id="selectBoardOne" resultType="com.trip.board.boardDO" parameterType="String">
+    	SELECT BRDNO, TITLE, CONVERT(VARCHAR(10), ENTRYDATE, 121) AS ENTRYDATE, TYPE, USERNM, CONTENTS, PASSWORD
+    	  FROM BO_BOARD
+    	 WHERE DELETEFLAG='N'
+    	   AND BRDNO=#{brdno}
+    </select>
+    
+    <insert id="insertBoard" parameterType="com.trip.board.boardDO">
+    	<selectKey resultType="String" keyProperty="brdno" order="BEFORE">
+    		SELECT ISNULL(MAX(BRDNO), 0) + 1 AS BRDNO FROM BO_BOARD
+    	</selectKey>
+    	
+    	INSERT INTO BO_BOARD (BRDNO, TYPE, CONTENTS, ENTRYDATE, UPDATEDATE, TITLE, DELETEFLAG, USERNM, PASSWORD)
+		VALUES (#{brdno}, #{type}, #{contents}, GETDATE(), GETDATE(), #{title}, 'N', #{usernm}, #{password})
+    </insert>
+    
+    <update id="updateBoard" parameterType="com.trip.board.boardDO">
+    	UPDATE BO_BOARD
+    	   SET TYPE=#{type}, CONTENTS=#{contents}, TITLE=#{title}
+			 , USERNM=#{usernm}, PASSWORD=#{password}, UPDATEDATE=GETDATE()
+    	 WHERE BRDNO=#{brdno}
+    </update>
+    
+    <update id="deleteBoard" parameterType="String">
+    	UPDATE BO_BOARD SET DELETEFLAG='Y'
+    	 WHERE BRDNO=#{brdno}
+    </update>
+    
+    
+</mapper>

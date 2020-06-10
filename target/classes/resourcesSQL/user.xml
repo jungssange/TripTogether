@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="trip.user">
+    <select id="selectUserList"  resultType="com.trip.user.userDO">
+        SELECT USERSQ, USERID, USERNM, PHOTO, JOINDATE, ADDRESS 
+         FROM US_USER
+        WHERE DELETEFLAG='N'
+    </select>
+</mapper>

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+@import url("common.css");
+
+/* 메인 아이콘 */
+.mainIcon { text-align:right; width:100%; }
+ 
+/* 메인로그  */
+.logo { text-align:center; width:100%; }
+
+/* 경로 및 시간 DIV 시작 */
+.rootDIV { width:950px; margin:40px auto; }
+.rootSearchDIV { display:inline-block; width:100%; text-align:center; }
+.rootSearch { width:50%; padding:5px 20px 10px 20px; border-radius:25px; height:50px; border:1px solid #dcdcdc; font-size:15px; }
+
+/*
+.rootLeft { display:inline-block; width:40%; text-align:left; }
+.rootLeft .left { display:inline-block; width:49%; text-align:left; }
+.rootLeft .right { display:inline-block; width:49%; text-align:left; float:right; }
+.rootRight { display:inline-block; width:59%; text-align:right; float:right; }
+.rootRight .left { display:inline-block; width:28%; text-align:left; }
+.rootRight .center { display:inline-block; width:28%; text-align:left; }
+.rootRight .right { display:inline-block; width:28%; text-align:left; }
+*/
+/* 경로 및 시간 DIV 끝 */
+
+/* 메인화면 출발지, 도착지, 가는날, 오늘날, 좌석 및 인원 textbox */
+.mainText { margin-top:5px; border-bottom:1px solid #d2d2d2; width:98%; height:30px; }
+
+/* 메인화면 지역 DIV 시작 */
+.placeDIV { text-align:center; width:100%; padding-top:60px; }
+.mainPlace { display:inline-block; width:22%; height:250px; border:1px solid #eeeeee; margin:0px 15px 0px 0px; }
+.mainPlaceLast {display:inline-block; width:22%; height:250px; border:1px solid #eeeeee; margin:0px; }
+.placeIcon { width:100%; height:25px; padding-top:10px; float:right; }
+.placeIcon .placeTitle { display:inline-block; width:27%; font-size:18px; text-align:left; font-weight:bold; vertical-align:top; }
+.placeIcon .placeView { display:inline-block; background:url('../images/common/placeView.png') no-repeat; width:20%; height:16px; margin-right:5px; vertical-align:bottom; }
+.placeIcon .placeLike { display:inline-block; background:url('../images/common/placeLike.png') no-repeat; width:20%; height:16px; margin-right:5px; vertical-align:bottom; }
+.placeIcon .placeReply { display:inline-block; background:url('../images/common/placeReply.png') no-repeat; width:20%; height:16px; vertical-align:bottom; }
+.placeCnt { font-size:12px; float:right; margin-top:3px; }
+/* 메인화면 지역 DIV 끝 */
+

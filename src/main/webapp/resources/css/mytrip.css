@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@import url("common.css");
+
+.tripDIV { width:100%; height:500px; border:1px solid #eeeeee; margin-top:10px; }
+.tripAreaLeft { display:inline-block; width:8%; height:100%; border-right:1px solid #eeeeee; vertical-align:top; font-size:12px; }
+.tripAreaLeft .menu { height:25%; border-bottom:1px solid #eeeeee; text-align:center; line-height:125px; vertical-align:middle; }
+.tripAreaLeft .menuL { height:25%; text-align:center; line-height:125px; vertical-align:middle; }
+
+.tripAreaCenter { display:inline-block; width:29%; height:100%; border-right:1px solid #eeeeee; vertical-align:top; line-height:50px; }
+.tripAreaCenter .menuTop { height:10%; border-bottom:1px solid #eeeeee; text-align:center; font-size:12px; }
+.tripAreaCenter .menuTop .menuTopL { display:inline-block; width:32%; height:100%; border-right:1px solid #eeeeee; }
+.tripAreaCenter .menuTop .menuTopR { display:inline-block; width:31%; height:100%; }
+
+.tripAreaCenter .roadArea { height:32%; }
+.tripAreaCenter .roadArea .areaL { display:inline-block; width:70%; margin:5px 0px 5px 5px; }
+.tripAreaCenter .roadArea .areaR { display:inline-block; width:22%; margin:5px 5px 5px 0px; vertical-align:top; float:right; padding-top:15px; }
+.tripAreaCenter .roadArea .areaR .areaRImage { background:url('../images/mytrip/sort.png') no-repeat; line-height:65px; background-size:50px 60px; }
+.tripAreaCenter .roadArea .areaB { width:100%; text-align:center; font-size:12px; }
+.tripAreaCenter .roadArea .areaB .Left { display:inline-block; width:46%; line-height:40px; height:40px; margin:5px; text-align:center; border:1px solid #eeeeee; border-radius:10px; }
+.tripAreaCenter .roadArea .areaB .Right { display:inline-block; width:45%; line-height:40px; height:40px; margin:5px 5px 5px 0px; text-align:center; border:1px solid #eeeeee; border-radius:10px; }
+
+.tripAreaCenter .roadArea .roadAreaTextF { padding:5px 10px 10px 10px; width:100%; height:45px; border:1px solid #eeeeee; border-radius:10px; }
+.tripAreaCenter .roadArea .roadAreaTextL { padding:5px 10px 10px 10px; width:100%; height:45px; border:1px solid #eeeeee; margin-top:5px; border-radius:10px; }
+
+.tripAreaCenter .root { height:8%; text-align:center; }
+.tripAreaCenter .root .rootText { display:inline-block; width:78%; line-height:23px; vertical-align:top; font-size:14px; }
+.tripAreaCenter .root .rootText .rootStar { display:inline-block; width:10%; background:url('../images/mytrip/star.png') no-repeat; margin:5px 0px; background-size: 20px; }
+.tripAreaCenter .root .rootText .rootStar .on { display:inline-block; width:100%; background:url('../images/mytrip/starHover.png') no-repeat; background-size: 20px; }
+
+.tripAreaCenter .rootList { overflow-y:auto; height:51%; }
+
+.tripAreaRight { display:inline-block; width:61%; height:100%; vertical-align:top; }
+
